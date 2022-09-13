@@ -1,0 +1,3 @@
+﻿  Network.cpp
+c:\users\l\documents\github\lee-do-hun\참고코드\과제\네트워크과제\온라인체스\클라이언트\project_chessgame\network.cpp(122): warning C4805: '==': 연산에 'int' 형식과 'bool' 형식을 함께 사용하는 것은 안전하지 않습니다.
+  Project_Chessgame.vcxproj -> C:\Users\L\Documents\GitHub\LEE-DO-HUN\참고코드\과제\네트워크과제\온라인체스\클라이언트\x64\Debug\Project_Chessgame.exe

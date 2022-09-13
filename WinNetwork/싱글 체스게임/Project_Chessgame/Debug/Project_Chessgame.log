@@ -1,0 +1,36 @@
+﻿  Board.cpp
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\board.cpp(14): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [12]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\board.cpp(14): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\board.cpp(16): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [12]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\board.cpp(16): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+  chess_pieces.cpp
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(165): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(165): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(177): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(177): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(191): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(191): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(206): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(206): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(221): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(221): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(236): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(236): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(255): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(255): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(267): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(267): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(281): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(281): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(296): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(296): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(311): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(311): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(326): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [15]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\chess_pieces.cpp(326): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+  Game_System.cpp
+  Player.cpp
+c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\player.cpp(17): error C2664: 'HANDLE LoadImageW(HINSTANCE,LPCWSTR,UINT,int,int,UINT)': 인수 2을(를) 'const char [12]'에서 'LPCWSTR'(으)로 변환할 수 없습니다.
+  c:\users\a10\desktop\lee-do-hun\참고코드\과제\winapi과제\챕터7\체스게임\project_chessgame\project_chessgame\player.cpp(17): note: 가리킨 형식이 관련이 없습니다. 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 함수 스타일 캐스트가 필요합니다.
+  소스.cpp
+  코드를 생성하고 있습니다...
