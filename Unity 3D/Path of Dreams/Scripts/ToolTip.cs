@@ -6,20 +6,6 @@ using UnityEngine.EventSystems;
 
 public class ToolTip : MonoBehaviour
 {
-    private static ToolTip m_instance;
-
-    public static ToolTip instance
-    {
-        get
-        {
-            if (m_instance == null)
-            {
-                m_instance = FindObjectOfType<ToolTip>();
-            }
-            return m_instance;
-        }
-    }
-
     public GameObject tooltip_obj;
 
     [SerializeField]

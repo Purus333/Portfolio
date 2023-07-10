@@ -6,20 +6,6 @@ using System;
 
 public class Item_Store_Check : MonoBehaviour
 {
-    private static Item_Store_Check m_instance;
-
-    public static Item_Store_Check instance
-    {
-        get
-        {
-            if (m_instance == null)
-            {
-                m_instance = FindObjectOfType<Item_Store_Check>();
-            }
-            return m_instance;
-        }
-    }
-
     public InputField buy_input_count_text;
     public InputField sell_input_count_text;
     public GameObject buy_panal_obj;

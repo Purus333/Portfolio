@@ -138,6 +138,8 @@ public class Enemy : LivingEntity
         healthSlider.gameObject.SetActive(true);
         healthSlider.maxValue = Starting_Health;
         healthSlider.value = health;
+
+        this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
     }
 
     public override void OnDamage(float damage, Vector3 hitPoint, Vector3 hitNormal)
@@ -183,6 +185,8 @@ public class Enemy : LivingEntity
     public override void Die()
     {
         base.Die();
+
+        this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
 
         Collider enemyCollider = GetComponent<Collider>();
         enemyCollider.enabled = false;

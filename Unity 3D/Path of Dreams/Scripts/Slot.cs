@@ -14,6 +14,8 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public bool item_valid_check;
     public GameObject slot_type_check;
     public float click_time;
+    public ToolTip Tp;
+    public Item_Store_Check Item_sc;
 
     private void Awake()
     {
@@ -88,12 +90,12 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (item_valid_check == true)
-            ToolTip.instance.Show_ToolTip(item, transform.position);
+            Tp.Show_ToolTip(item, transform.position);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        ToolTip.instance.Hide_ToolTip();
+        Tp.Hide_ToolTip();
     }
 
     public void OnPointerClick(PointerEventData eventdata)
@@ -114,21 +116,21 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
             if (GameManager.instance.store_open == true && this.gameObject.tag == "Npc_Inven") // 상점구매
             {
-                if (Item_Store_Check.instance.buy_panal_obj.gameObject.activeSelf == false)
+                if (Item_sc.buy_panal_obj.gameObject.activeSelf == false)
                 {
-                    Item_Store_Check.instance.tmp_item = this.item;
-                    Item_Store_Check.instance.tmp_item_id = this.item_id;
-                    Item_Store_Check.instance.buy_panal_obj.gameObject.SetActive(true);
+                    Item_sc.tmp_item = this.item;
+                    Item_sc.tmp_item_id = this.item_id;
+                    Item_sc.buy_panal_obj.gameObject.SetActive(true);
                 }
             }
             else if (GameManager.instance.store_open == true && this.gameObject.tag == "Slot") // 상점판매
             {
-                if (Item_Store_Check.instance.sell_panal_obj.gameObject.activeSelf == false)
+                if (Item_sc.sell_panal_obj.gameObject.activeSelf == false)
                 {
-                    Item_Store_Check.instance.tmp_item = this.item;
-                    Item_Store_Check.instance.tmp_item_id = this.item_id;
-                    Item_Store_Check.instance.tmp_item_count = this.item_count;
-                    Item_Store_Check.instance.sell_panal_obj.gameObject.SetActive(true);
+                    Item_sc.tmp_item = this.item;
+                    Item_sc.tmp_item_id = this.item_id;
+                    Item_sc.tmp_item_count = this.item_count;
+                    Item_sc.sell_panal_obj.gameObject.SetActive(true);
                 }
             }
 
@@ -189,11 +191,11 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             click_time = Time.time;
         }
 
-        if (ToolTip.instance.tooltip_obj.activeSelf == true) // 슬롯의 아이템 변동 시 툴팁에 변동 내용을 반영
+        if (Tp.tooltip_obj.activeSelf == true) // 슬롯의 아이템 변동 시 툴팁에 변동 내용을 반영
         {
-            ToolTip.instance.Hide_ToolTip();
+            Tp.Hide_ToolTip();
             if (item_valid_check == true)
-                ToolTip.instance.Show_ToolTip(item, transform.position);
+                Tp.Show_ToolTip(item, transform.position);
         }
     }
 
@@ -242,11 +244,11 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         {
             Slot_ChangeAndSet();
 
-            if (ToolTip.instance.tooltip_obj.activeSelf == true) // tool tip 업데이트
+            if (Tp.tooltip_obj.activeSelf == true) // tool tip 업데이트
             {
-                ToolTip.instance.Hide_ToolTip();
+                Tp.Hide_ToolTip();
                 if (item_valid_check == true)
-                    ToolTip.instance.Show_ToolTip(item, transform.position);
+                    Tp.Show_ToolTip(item, transform.position);
             }
         }
     }

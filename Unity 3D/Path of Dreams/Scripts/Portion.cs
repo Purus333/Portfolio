@@ -24,6 +24,7 @@ public class Portion : MonoBehaviour
     public Slot p_slot;
     public Image cooltime_image;
     public bool cooltime_check = false;
+    public ToolTip Tp;
 
     private void Awake()
     {
@@ -60,11 +61,12 @@ public class Portion : MonoBehaviour
                 if (value == true)
                     p_slot.Slot_Count(-1);
 
-                if (ToolTip.instance.tooltip_obj.activeSelf == true) // 슬롯의 아이템 변동 시 툴팁에 변동 내용을 반영하기위함
+                
+                if (Tp.tooltip_obj.activeSelf == true) // 슬롯의 아이템 변동 시 툴팁에 변동 내용을 반영하기위함
                 {
-                    ToolTip.instance.Hide_ToolTip();
+                    Tp.Hide_ToolTip();
                     if (p_slot.item_valid_check == true)
-                        ToolTip.instance.Show_ToolTip(p_slot.item, transform.position);
+                        Tp.Show_ToolTip(p_slot.item, transform.position);
                 }
             }
         }
