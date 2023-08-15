@@ -5,22 +5,6 @@ using System.IO;
 
 public class SaveAndLoad : MonoBehaviour
 {
-    private static SaveAndLoad m_instance;
-
-    public static SaveAndLoad instance
-    {
-        get
-        {
-
-            if (m_instance == null)
-            {
-                m_instance = FindObjectOfType<SaveAndLoad>();
-            }
-
-            return m_instance;
-        }
-    }
-
     public Save_Data save_data;
     public Save_Data load_data;
     private string save_directory;

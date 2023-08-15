@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public bool scene_move_check;
     public GameObject player;
     public GameObject minimap_cam;
+    public SaveAndLoad g_SaveandLoad;
     public bool npc_text_start;
     public bool store_open;
     public bool scene_load;

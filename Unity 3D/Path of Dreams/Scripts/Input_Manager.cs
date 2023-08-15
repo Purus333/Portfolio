@@ -7,6 +7,7 @@ public class Input_Manager : MonoBehaviour
 {
     public InputField input_text;
     public Canvas ui_cvs;
+    public SaveAndLoad iput_SaveandLoad;
 
     private void Awake()
     {
@@ -16,7 +17,7 @@ public class Input_Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        iput_SaveandLoad = GameManager.instance.g_SaveandLoad.GetComponent<SaveAndLoad>();
     }
 
     // Update is called once per frame
@@ -79,7 +80,8 @@ public class Input_Manager : MonoBehaviour
 
         ui_cvs.gameObject.SetActive(true); // 유저 인터페이스 on
 
-        SaveAndLoad.instance.Load();
+        iput_SaveandLoad.Load();
+
         Player_Info.instance.healthSlider.maxValue = Player_Info.instance.Player_Max_Health;
         Player_Info.instance.healthSlider.value = Player_Info.instance.health;
         Player_Info.instance.expSlider.maxValue = Player_Info.instance.Player_MaxExp;
