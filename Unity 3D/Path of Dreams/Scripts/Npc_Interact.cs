@@ -40,16 +40,7 @@ public class Npc_Interact : MonoBehaviour
 
             if (GameManager.instance.npc_text_start == false && Player_Info.instance.player_talkable == true && Player_Info.instance.player_talkstart == true)
             {
-                if (this.gameObject.name == "wood_npc01")
-                    WoodNpc();
-                else if (this.gameObject.name == "Village_npc01")
-                    VillageNpc01();
-                else if (this.gameObject.name == "Village_npc02")
-                    VillageNpc02();
-                else if (this.gameObject.name == "Village_npc03")
-                    VillageNpc03();
-                else if (this.gameObject.name == "Village_npc04(store)")
-                    VillageNpc04();
+                Check_Npc_List();
             }
         }
     }
@@ -61,6 +52,20 @@ public class Npc_Interact : MonoBehaviour
             npc_hud.gameObject.SetActive(false);
             Player_Info.instance.player_talkable = false;
         }
+    }
+
+    public void Check_Npc_List()
+    {
+        if (this.gameObject.name == "wood_npc01")
+            WoodNpc();
+        else if (this.gameObject.name == "Village_npc01")
+            VillageNpc01();
+        else if (this.gameObject.name == "Village_npc02")
+            VillageNpc02();
+        else if (this.gameObject.name == "Village_npc03")
+            VillageNpc03();
+        else if (this.gameObject.name == "Village_npc04(store)")
+            VillageNpc04();
     }
 
     public void Check_TalkEnd()

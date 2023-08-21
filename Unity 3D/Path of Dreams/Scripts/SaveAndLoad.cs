@@ -20,7 +20,7 @@ public class SaveAndLoad : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void Save()

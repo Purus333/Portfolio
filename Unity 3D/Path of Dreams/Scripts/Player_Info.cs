@@ -173,7 +173,7 @@ public class Player_Info : LivingEntity
 
         GameObject hudtxt = Instantiate(hud_damage_txt);
         hudtxt.transform.position = hud_pos.position;
-        hudtxt.GetComponent<Damage_Show_Enemy>().show_damage = damage;
+        hudtxt.GetComponent<Damage_Show>().show_damage = damage;
     }
 
     public override void Die()
