@@ -166,10 +166,11 @@ public class Player_Info : LivingEntity
             player_info_audio.PlayOneShot(player_hit_sound);
         }
 
-        // LivingEntity의 OnDamage()를 실행하여 데미지 적용
         base.OnDamage(damage, hitPoint, hitNormal);
         healthSlider.value = health;
         Ui_Manager.instance.UserHpInfo(Player_Max_Health, health);
+
+        Damage_Show_Pool.instance.Set_Damage(hud_pos, damage, 100);
 
         GameObject hudtxt = Instantiate(hud_damage_txt);
         hudtxt.transform.position = hud_pos.position;

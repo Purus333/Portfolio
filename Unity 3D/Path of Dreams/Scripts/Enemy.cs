@@ -156,6 +156,9 @@ public class Enemy : LivingEntity
         // LivingEntity의 OnDamage()를 실행하여 데미지 적용
         base.OnDamage(damage, hitPoint, hitNormal);
         healthSlider.value = health;
+
+        Damage_Show_Pool.instance.Set_Damage(hud_pos, damage, 200);
+
         GameObject hudtxt = Instantiate(hud_damage_txt);
         hudtxt.transform.position = hud_pos.position;
         hudtxt.GetComponent<Damage_Show>().show_damage = damage;
