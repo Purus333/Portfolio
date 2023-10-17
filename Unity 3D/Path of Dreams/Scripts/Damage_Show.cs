@@ -19,7 +19,7 @@ public class Damage_Show : MonoBehaviour
     {
         dam_txt = GetComponent<TextMeshPro>();
         dam_txt.text = "" + show_damage;
-        Invoke("DestroyObject", 2.0f);
+        Invoke("Off", 2.0f);
     }
 
     // Update is called once per frame
@@ -31,5 +31,17 @@ public class Damage_Show : MonoBehaviour
     public void DestroyObject()
     {
         Destroy(this.gameObject);
+    }
+
+    public void On()
+    {
+        dam_txt.text = "" + show_damage;
+        this.gameObject.SetActive(true);
+        Invoke("Off", 2.0f);
+    }
+
+    public void Off()
+    {
+        this.gameObject.SetActive(false);
     }
 }
