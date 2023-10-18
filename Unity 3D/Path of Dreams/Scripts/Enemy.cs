@@ -159,10 +159,6 @@ public class Enemy : LivingEntity
 
         Damage_Show_Pool.instance.Set_Damage(hud_pos, damage, 200);
 
-        GameObject hudtxt = Instantiate(hud_damage_txt);
-        hudtxt.transform.position = hud_pos.position;
-        hudtxt.GetComponent<Damage_Show>().show_damage = damage;
-
         ondamage_able = false;
     }
 

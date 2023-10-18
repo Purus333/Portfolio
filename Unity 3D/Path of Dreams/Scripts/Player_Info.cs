@@ -171,10 +171,6 @@ public class Player_Info : LivingEntity
         Ui_Manager.instance.UserHpInfo(Player_Max_Health, health);
 
         Damage_Show_Pool.instance.Set_Damage(hud_pos, damage, 100);
-
-        //GameObject hudtxt = Instantiate(hud_damage_txt);
-        //hudtxt.transform.position = hud_pos.position;
-        //hudtxt.GetComponent<Damage_Show>().show_damage = damage;
     }
 
     public override void Die()

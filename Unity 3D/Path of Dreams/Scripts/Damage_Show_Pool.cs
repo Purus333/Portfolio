@@ -18,12 +18,14 @@ public class Damage_Show_Pool : MonoBehaviour
         }
     }
 
-    private List<GameObject> show_dam_obj = new List<GameObject>();
+    private List<GameObject> show_dam_obj_e = new List<GameObject>();
+    private List<GameObject> show_dam_obj_p = new List<GameObject>();
     public GameObject e_hud_damage_txt;
     public GameObject p_hud_damage_txt;
     public GameObject pool_e;
     public GameObject pool_p;
-    public bool create_trigger = false;
+    public bool create_trigger_e = false;
+    public bool create_trigger_p = false;
 
     private void Awake()
     {
@@ -32,7 +34,7 @@ public class Damage_Show_Pool : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -44,61 +46,77 @@ public class Damage_Show_Pool : MonoBehaviour
     {
         if (check_type == 100)
         {
-            if (show_dam_obj.Count == 0)
+            if (show_dam_obj_p.Count == 0)
             {
                 GameObject hudtxt = Instantiate(p_hud_damage_txt);
                 hudtxt.transform.position = pos.position;
                 hudtxt.GetComponent<Damage_Show>().show_damage = dam;
-                show_dam_obj.Add(hudtxt);
-                //pool_p.transform.parent = hudtxt.transform;
+                show_dam_obj_p.Add(hudtxt);
+                hudtxt.transform.parent = pool_p.transform;
             }
-            else if (show_dam_obj.Count > 0)
+            else if (show_dam_obj_p.Count > 0)
             {
-                for (int i = 0; i < show_dam_obj.Count; i++)
+                for (int i = 0; i < show_dam_obj_p.Count; i++)
                 {
-                    if (show_dam_obj[i].activeSelf == false)
+                    if (show_dam_obj_p[i].activeSelf == false)
                     {
-                        show_dam_obj[i].transform.position = pos.position;
-                        show_dam_obj[i].GetComponent<Damage_Show>().show_damage = dam;
-                        show_dam_obj[i].GetComponent<Damage_Show>().On();
-                        create_trigger = false;
+                        show_dam_obj_p[i].transform.position = pos.position;
+                        show_dam_obj_p[i].GetComponent<Damage_Show>().show_damage = dam;
+                        show_dam_obj_p[i].GetComponent<Damage_Show>().On();
+                        create_trigger_p = false;
                         break;
                     }
                     else
-                        create_trigger = true;
+                        create_trigger_p = true;
                 }
 
-                if (create_trigger == true)
+                if (create_trigger_p == true)
                 {
                     GameObject hudtxt = Instantiate(p_hud_damage_txt);
                     hudtxt.transform.position = pos.position;
                     hudtxt.GetComponent<Damage_Show>().show_damage = dam;
-                    show_dam_obj.Add(hudtxt);
-                    create_trigger = false;
+                    show_dam_obj_p.Add(hudtxt);
+                    hudtxt.transform.parent = pool_p.transform;
+                    create_trigger_p = false;
                 }
             }
         }
         else if (check_type == 200)
         {
-          
-            //for (int i = 0; i < show_dam.Count; i++)
-            //{
-            //    if (show_dam[i].enabled == false)
-             //   {
-             //       show_dam[i].transform.position = pos.position;
-             //       show_dam[i].show_damage = dam;
-             //   }
-             //   else
-             //   {
-             //       Damage_Show temp_dam_show = null;
-             //       Instantiate(e_hud_damage_txt);
-            //
-            //        temp_dam_show.transform.position = pos.position;
-             //       temp_dam_show.show_damage = dam;
-             //       show_dam.Add(temp_dam_show);
-             //   }
-             //
-            
+            if (show_dam_obj_e.Count == 0)
+            {
+                GameObject hudtxt = Instantiate(e_hud_damage_txt);
+                hudtxt.transform.position = pos.position;
+                hudtxt.GetComponent<Damage_Show>().show_damage = dam;
+                show_dam_obj_e.Add(hudtxt);
+                hudtxt.transform.parent = pool_e.transform;
+            }
+            else if (show_dam_obj_e.Count > 0)
+            {
+                for (int i = 0; i < show_dam_obj_e.Count; i++)
+                {
+                    if (show_dam_obj_e[i].activeSelf == false)
+                    {
+                        show_dam_obj_e[i].transform.position = pos.position;
+                        show_dam_obj_e[i].GetComponent<Damage_Show>().show_damage = dam;
+                        show_dam_obj_e[i].GetComponent<Damage_Show>().On();
+                        create_trigger_e = false;
+                        break;
+                    }
+                    else
+                        create_trigger_e = true;
+                }
+
+                if (create_trigger_e == true)
+                {
+                    GameObject hudtxt = Instantiate(e_hud_damage_txt);
+                    hudtxt.transform.position = pos.position;
+                    hudtxt.GetComponent<Damage_Show>().show_damage = dam;
+                    show_dam_obj_e.Add(hudtxt);
+                    hudtxt.transform.parent = pool_e.transform;
+                    create_trigger_e = false;
+                }
+            }
         }
     }
 }
