@@ -251,6 +251,11 @@ public class Enemy : LivingEntity
         }
     }
 
+    private void Skill_Attack()
+    {
+
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player_HitPoint") && other.gameObject.GetComponentInParent<LivingEntity>().dead == false)
@@ -260,6 +265,8 @@ public class Enemy : LivingEntity
             if (this.gameObject.name == "Polygonal Metalon Green(Clone)")
                 attack_cooltime = 2.0f;
             else if (this.gameObject.name == "Polygonal Metalon Red(Clone)")
+                attack_cooltime = 0.35f;
+            else if (this.gameObject.name == "Polygonal Metalon Purple(Clone)")
                 attack_cooltime = 0.3f;
 
             if (!dead && Time.time >= last_attack_time + attack_cooltime)
