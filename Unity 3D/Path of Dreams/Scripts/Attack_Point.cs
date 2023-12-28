@@ -65,17 +65,25 @@ public class Attack_Point : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Player_HitPoint") && attack_range_obj.activeSelf == true)
         {
+            float tmp_dam = this.gameObject.GetComponent<Enemy>().damage;
+
             if (this.gameObject.name == "Polygonal Metalon Green" || this.gameObject.name == "Polygonal Metalon Green(Clone)")
             {
-                int value = Random.Range(3, 6);
+                float value = Random.Range(tmp_dam - 2, tmp_dam + 1);
 
-                other.gameObject.GetComponentInParent<Player_Info>().OnDamage(value, new Vector3(0, 0, 0), new Vector3(0, 0, 0));
+                other.gameObject.GetComponentInParent<Player_Info>().OnDamage((int)value, new Vector3(0, 0, 0), new Vector3(0, 0, 0));
             }
             else if (this.gameObject.name == "Polygonal Metalon Red" || this.gameObject.name == "Polygonal Metalon Red(Clone)")
             {
-                int value = Random.Range(15, 23);
+                float value = Random.Range(tmp_dam - 5, tmp_dam + 1);
 
-                other.gameObject.GetComponentInParent<Player_Info>().OnDamage(value, new Vector3(0, 0, 0), new Vector3(0, 0, 0));
+                other.gameObject.GetComponentInParent<Player_Info>().OnDamage((int)value, new Vector3(0, 0, 0), new Vector3(0, 0, 0));
+            }
+            else if (this.gameObject.name == "Polygonal Metalon Purple" || this.gameObject.name == "Polygonal Metalon Purple(Clone)")
+            {
+                float value = Random.Range(tmp_dam - 8, tmp_dam + 1);
+
+                other.gameObject.GetComponentInParent<Player_Info>().OnDamage((int)value, new Vector3(0, 0, 0), new Vector3(0, 0, 0));
             }
         }
     }

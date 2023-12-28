@@ -41,13 +41,11 @@ public class Enemy_Spawner : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Player_Movement.instance.player_Input.move_animotion > 0 || spawn_start == true) // 로딩후 캐릭터가 움직일시 스폰시작
@@ -77,6 +75,8 @@ public class Enemy_Spawner : MonoBehaviour
         if (enemyPrefab.gameObject.name == "Polygonal Metalon Green")
             spawn_count = 4;
         else if (enemyPrefab.gameObject.name == "Polygonal Metalon Red")
+            spawn_count = 1;
+        else if (enemyPrefab.gameObject.name == "Polygonal Metalon Purple")
             spawn_count = 1;
 
         for (int i = 0; i < spawn_count; i++)
@@ -114,6 +114,15 @@ public class Enemy_Spawner : MonoBehaviour
             re_health = Random.Range(500, 550);
             re_damage = 20;
             re_speed = 2.3f;
+        }
+        else if (enemyPrefab.gameObject.name == "Polygonal Metalon Purple")
+        {
+            spawn_count = 1;
+            wait_time = 90;
+
+            re_health = Random.Range(1500, 1550);
+            re_damage = 35;
+            re_speed = 2.5f;
         }
 
         if (wait_time > timer)
@@ -153,6 +162,12 @@ public class Enemy_Spawner : MonoBehaviour
             health = Random.Range(500, 550);
             damage = 20;
             speed = 2.3f;
+        }
+        else if (enemyPrefab.gameObject.name == "Polygonal Metalon Purple")
+        {
+            health = Random.Range(1500, 1550);
+            damage = 35;
+            speed = 2.5f;
         }
 
         Vector3 save_pos = spawnPoint.position; // 원상복귀용
