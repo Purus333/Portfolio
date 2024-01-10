@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
 
                     load_done = true;
                 }
-                else if (Player_Info.instance.player_map_index == 2 || Player_Info.instance.player_map_index == 3 || Player_Info.instance.player_map_index == 4)
+                else if (Player_Info.instance.player_map_index == 2 || Player_Info.instance.player_map_index == 3 || Player_Info.instance.player_map_index == 4 || Player_Info.instance.player_map_index == 5)
                 {
                     temp_map_index = Player_Info.instance.player_map_index;
 
@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
                 player.transform.position = new Vector3(39.78f, 0.1f, 54.38f);
                 minimap_cam.transform.position = new Vector3(39.78f, 17.36f, 54.38f);
             }
-            else if (Player_Info.instance.player_map_index == 3 || Player_Info.instance.player_map_index == 4)
+            else if (Player_Info.instance.player_map_index == 3 || Player_Info.instance.player_map_index == 4 || Player_Info.instance.player_map_index == 5)
             {
                 player.transform.position = new Vector3(-25.5f, 0.1f, 49.58f);
                 minimap_cam.transform.position = new Vector3(-25.5f, 17.36f, 49.58f);

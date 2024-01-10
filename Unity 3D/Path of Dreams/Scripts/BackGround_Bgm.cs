@@ -52,12 +52,12 @@ public class BackGround_Bgm : MonoBehaviour
             background_audio.Play();
             check_map_index = 3;
         }
-        else if (Player_Info.instance.player_map_index == 4)
+        else if (Player_Info.instance.player_map_index == 4 || Player_Info.instance.player_map_index == 5)
         {
             background_audio.Stop();
             background_audio.clip = bgm3;
             background_audio.Play();
-            check_map_index = 4;
+            check_map_index = Player_Info.instance.player_map_index;
         }
     }
 }

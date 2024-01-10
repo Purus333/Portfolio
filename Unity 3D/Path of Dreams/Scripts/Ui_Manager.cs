@@ -306,6 +306,8 @@ public class Ui_Manager : MonoBehaviour
             map_name_fadeTxt.text = "ƒÆ∏ÆΩ∫∏∂¿ª";
         else if (check_map_index == 4)
             map_name_fadeTxt.text = "¡¯»Î±Ê Ω£";
+        else if (check_map_index == 5)
+            map_name_fadeTxt.text = "±Ì¿∫ πŸ¿ß Ω£";
 
         StartCoroutine("FadeMapName");
     }

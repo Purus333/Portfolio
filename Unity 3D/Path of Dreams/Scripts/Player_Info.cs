@@ -197,7 +197,7 @@ public class Player_Info : LivingEntity
                 this.transform.position = new Vector3(36.1f, 0, 55.85f);
             else if (player_map_index == 3)
                 this.transform.position = new Vector3(-25.7f, 0, 47.31f);
-            else if (player_map_index == 4)
+            else if (player_map_index == 4 || player_map_index == 5)
             {
                 this.transform.position = new Vector3(-25.7f, 0, 47.31f);
                 player_map_index = 3;
@@ -353,6 +353,12 @@ public class Player_Info : LivingEntity
         {
             player_map_index = 4;
             Ui_Manager.instance.showmap_trigger = true;
+        }
+        else if (other.gameObject.CompareTag("Rock_Wood") && player_map_index != 5)
+        {
+            player_map_index = 5;
+            Ui_Manager.instance.showmap_trigger = true;
+            // mapmove 스크립트 추가하기 - 플레이어좌표, 움직임, 애니메이션 0으로 설정해주는 오브젝트
         }
     }
 }
